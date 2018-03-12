@@ -12,19 +12,21 @@ public:
 	MyList();
 	~MyList();
 
-	bool insert(int position,int data);//²åÈëÊı¾İ
+	bool insert(int position,int data);//æ’å…¥æ•°æ®
 
-	bool isExist(int position);//¸ÃÎ»ÖÃÊÇ·ñÓĞÖµ
+	bool isExist(int position);//è¯¥ä½ç½®æ˜¯å¦æœ‰å€¼
 	
-	int get(int position);//È¡µÃÊı¾İ
+	int get(int position);//å–å¾—æ•°æ®
+	
+	int operator[](int position);//åƒæ•°ç»„ä¸€æ ·å–å¾—æ•°æ®
 
-	bool update(int position, int data);//¸üĞÂÊı¾İ
+	bool update(int position, int data);//æ›´æ–°æ•°æ®
 
-	bool remove(int position);//É¾³ıÊı¾İ
+	bool remove(int position);//åˆ é™¤æ•°æ®
 
-	int size();//È¡µÃÁ´±í³¤¶È
+	int size();//å–å¾—é“¾è¡¨é•¿åº¦
 
-	void print();//µ÷ÊÔÊä³ö
+	void print();//è°ƒè¯•è¾“å‡º
 
 private:
 	Node* head;
