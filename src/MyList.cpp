@@ -70,6 +70,11 @@ int MyList::get(int position)
 	return false;
 }
 
+int MyList::operator[](int position)
+{
+	return get(position);
+}
+
 bool MyList::update(int position, int data)
 {
 	if (isExist(position))
@@ -119,8 +124,8 @@ int MyList::size()
 void MyList::print()
 {
 	Node* p = head;
-	std::cout << "×Ü¹²ÓÐ" << head->data << "¸öÊý¾Ý¡£" << std::endl;
-	std::cout << "Á´±íÖÐµÄÊý¾Ý:";
+	std::cout << "æ€»å…±æœ‰" << head->data << "ä¸ªæ•°æ®ã€‚" << std::endl;
+	std::cout << "é“¾è¡¨ä¸­çš„æ•°æ®:";
 	for (int i = 0; i < head->data; i++)
 	{
 		p = p->next;
